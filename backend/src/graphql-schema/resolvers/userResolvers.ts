@@ -1,84 +1,70 @@
-import { v4 } from "uuid";
+//import { v4 } from "uuid";
+import { request } from "express";
+import UserModel, { User, UserDocument } from "../../models/user";
 import { GqlContext } from "../GqlContext";
-import { todos } from "../db";
 
 
-interface User {
-  id: string;
-  username: string;
-  email?: string;
-}
+export const signup = async (
+  parent: any,
+  args: {},
+  ctx: GqlContext,
+  info: any
+  ): Promise<UserDocument> => {
+  let user: User = request.body;
+  console.log(user);
+  
+  let saved: UserDocument = await UserModel.create(user);
+  return saved;
+};
 
-interface Todo {
-  id: string;
-  title: string;
-  description?: string;
-}
-
+export const login = async (
+  parent: any,
+  args: {},
+  ctx: GqlContext,
+  info: any
+  ): Promise<UserDocument> => {
+    let user: User = request.body;
+  let saved: UserDocument = await UserModel.create(user);
+  return saved;
+};
 
 export const getUser = async (
   parent: any,
-  args: {
-    id: string;
-  },
+  args: { id: string },
   ctx: GqlContext,
   info: any
 ): Promise<User> => {
-  return {
-    id: v4(),
-    username: "dave",
+  let user: User = {
+    firstName: "Thomas",
+    lastName: "Darko",
+    email: "some email",
+    role: 4,
+    password: "thomas",
   };
+
+  let xx = UserModel.create(user);
+  console.log("user=", user);
+  console.log("xx=", xx);
+  return user;
 };
 
- 
-const NEW_TODO = "NEW TODO";
-
-export const getTodos = async (
-      parent: any,
-      args: null,
-      ctx: GqlContext,
-      info: any
-    ): Promise<Array<Todo>> => {
-      return [
-        {
-          id: v4(),
-          title: "First todo",
-          description: "First todo description",
-        },
-        {
-          id: v4(),
-          title: "Second todo",
-          description: "Second todo description",
-        },
-        {
-          id: v4(),
-          title: "Third todo",
-        },
-      ];
-    }
- 
-    export const addTodo = async (
-      parent: any,
-      args: {
-        title: string;
-        description: string;
-      },
-      { pubsub }: GqlContext,
-      info: any
-    ): Promise<Todo> => {
-      const newTodo = {
-        id: v4(),
-        title: args.title,
-        description: args.description,
-      };
-      console.log("newTodo", newTodo);
-      todos.push(newTodo);
-      pubsub.publish(NEW_TODO, { newTodo });
-      return todos[todos.length - 1];
-    }
-
-
- export const newTodo = {
-      subscribe: (parent:any, args: null, { pubsub }: GqlContext) =>
-        pubsub.asyncIterator(NEW_TODO),
-    }
+export const getUsers = async (
+  parent: any,
+  args: {},
+  ctx: GqlContext,
+  info: any
+  ): Promise<User> => {
+    let user: User = {
+    firstName: "Thomas",
+    lastName: "Darko",
+    email: "some email",
+    password: "thomas",
+    role: 0,
+  };
+  
+  let xx = await UserModel.create(user);
+  console.log("user=", user);
+  console.log("xx=", xx);
+  
+  return xx;
+};

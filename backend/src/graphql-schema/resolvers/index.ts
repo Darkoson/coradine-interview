@@ -1,16 +1,12 @@
 import { IResolvers } from "@graphql-tools/utils";
-import * as todo from "./todoResolvers";
+import { getUser, signup } from "./userResolvers";
 
 const resolvers: IResolvers = {
   Query: {
-    getUser: todo.getUser,
-    getTodos: todo.getTodos,
+    getUser,
   },
   Mutation: {
-    addTodo: todo.addTodo,
-  },
-  Subscription: {
-    newTodo: todo.newTodo,
+    signup,
   },
 };
 
