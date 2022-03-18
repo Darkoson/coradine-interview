@@ -4,11 +4,11 @@ import {
   pre,
   prop,
   QueryMethod,
-  ReturnModelType,
+//  ReturnModelType,
 } from "@typegoose/typegoose";
 import { Field, ObjectType } from "type-graphql";
 import bcrypt from "bcryptjs";
-import { AsQueryMethod } from "@typegoose/typegoose/lib/types";
+import { AsQueryMethod, QueryHelperThis } from "@typegoose/typegoose/lib/types";
 
 @pre<User>("save", async function () {
   if (!this.isModified("password")) return;
@@ -42,7 +42,7 @@ export default class User {
 export const UserModel = getModelForClass<typeof User, QueryHelpers>(User);
 
 function findByEmail(
-  this: ReturnModelType<typeof User, QueryHelpers>,
+  this: QueryHelperThis<typeof User, QueryHelpers>,
   email: User["email"]
 ) {
   return this.findOne({ email });

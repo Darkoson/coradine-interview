@@ -9,7 +9,7 @@ import { signJwt } from "../utilities/jwt";
 export class UserService {
   async login(input: LoginInput, context: Context) {
     const errorMessage = "Invalid email or password";
-    const user: any = UserModel.find().findByEmail(input.email).lean();
+    const user: any = await UserModel.find().findByEmail(input.email).lean().exec();
     if (!user) {
       throw new ApolloError(errorMessage);
     }
@@ -18,23 +18,19 @@ export class UserService {
     if (!isPasswordValid) {
       throw new ApolloError(errorMessage);
     }
-console.log(typeof user);
-
 
     const token = signJwt(user);
 
     context.res.cookie("accessToken", token, {
       maxAge: 3.154e10, 
       httpOnly: true,
-      domain: "localhost",
+      domain: "*",
       path: "/",
       sameSite: "strict",
-      secure: process.env.NODE_ENV === "production",
+      secure: false,
     });
 
-    // return the jwt
     return token;
- 
   }
 
   async signup(params: SignupInput): Promise<User> {

@@ -21,7 +21,9 @@ class UserResolver {
   }
 
   @Query(() => User)
-  me() {}
+  me(@Ctx() context: Context) {
+    return context.user
+  }
 }
 
 export default UserResolver;
