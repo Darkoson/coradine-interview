@@ -8,8 +8,6 @@ dotenv.config();
 import { connectToDatabase } from "./utilities/database";
 //import { getApolloServerStarted } from "./utilities/server";
 
-
-
 import { ApolloServer } from "apollo-server-express";
 import {
   ApolloServerPluginLandingPageGraphQLPlayground,
@@ -24,49 +22,46 @@ import User from "./graphql/schema/user.schema";
 import express from "express";
 import cookieParser from "cookie-parser";
 
-
 async function bootstrapApplication() {
-    const schema = await buildSchema({
-      resolvers,
-    });
+  const schema = await buildSchema({
+    resolvers,
+  });
 
-    const app = express();
-    app.use(cookieParser());
+  const app = express();
+  app.use(cookieParser());
 
-    const apolloServer = new ApolloServer({
-      schema,
-      context: (ctx: Context) => {
-        const context = ctx;
+  const apolloServer = new ApolloServer({
+    schema,
+    context: (ctx: Context) => {
+      const context = ctx;
 
-        console.log("context.user=", ctx.user);
+      //console.log("context.user=", ctx.user);
 
-        if (ctx.req.cookies.accessToken) {
-          const user = verifyJwt<User>(ctx.req.cookies.accessToken);
-          context.user = user;
-        }
-        return context;
-      },
-      plugins: [
-        process.env.NODE_ENV == "production"
-          ? ApolloServerPluginLandingPageProductionDefault()
-          : ApolloServerPluginLandingPageGraphQLPlayground(),
-      ],
-    });
+      if (ctx.req.cookies.accessToken) {
+        const user = verifyJwt<User>(ctx.req.cookies.accessToken);
+        context.user = user;
+      }
+      return context;
+    },
+    plugins: [
+      process.env.NODE_ENV == "production"
+        ? ApolloServerPluginLandingPageProductionDefault()
+        : ApolloServerPluginLandingPageGraphQLPlayground(),
+    ],
+  });
 
-    await apolloServer.start();
-    apolloServer.applyMiddleware({ app });
+  await apolloServer.start();
+  apolloServer.applyMiddleware({ app });
 
-
- // const { app, apolloServer } = await getApolloServerStarted();
+  // const { app, apolloServer } = await getApolloServerStarted();
   //apolloServer.applyMiddleware({ app });
 
   app.listen({ port: process.env.SERVER_PORT }, () => {
     console.log(`🚀 Server ready at http://localhost:${process.env.SERVER_PORT}  
-🚀 gql on http://localhost:${process.env.SERVER_PORT}${apolloServer.graphqlPath}`
-    );
+🚀 gql on http://localhost:${process.env.SERVER_PORT}${apolloServer.graphqlPath}`);
   });
 
   connectToDatabase();
 }
 
-bootstrapApplication(); 
+bootstrapApplication();

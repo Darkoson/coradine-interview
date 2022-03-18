@@ -32,3 +32,25 @@ export class LoginInput {
   @Field(() => String)
   password: string;
 }
+
+@InputType()
+export class CandidateInput {
+  @Field(() => String, { nullable: true })
+  _id: string;
+
+  @IsEmail()
+  @Field(() => String, { nullable: true })
+  email: string;
+
+  @Field(() => String, { nullable: true })
+  firstName: string;
+
+  @Field(() => String, { nullable: true })
+  lastName: string;
+
+  @Field(() => String, { nullable: true })
+  position: string;
+
+  @Field(() => String, { nullable: true })
+  skillSet: string;
+}

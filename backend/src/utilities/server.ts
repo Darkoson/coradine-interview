@@ -25,7 +25,6 @@ export async function getApolloServerStarted() {
     context: (ctx: Context) => {
       const context = ctx;
 
-      console.log("context.user=", ctx.user)
 
       if (ctx.req.cookies.accessToken) {
         const user = verifyJwt<User>(ctx.req.cookies.accessToken);
