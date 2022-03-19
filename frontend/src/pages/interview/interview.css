@@ -1,0 +1,1017 @@
+
+h1{
+    /* border: 1px solid blueviolet; */
+    width: 230px;
+    color: rgb(29, 148, 228);
+    margin-left: 265px;
+    margin-top:80px;
+    margin-bottom: 50px;
+    font-size: 2em;
+}
+
+.interview-grid{
+    /* border: 1px solid blue; */
+    width: 1180px;
+    height: 100vh;
+    margin-left: 80px;
+    display: grid;
+    grid-gap: 1rem 5rem;
+    grid-template-columns: repeat(3, 1fr) ;
+    grid-template-rows: 1fr 2fr 2fr;
+    grid-template-areas:
+        "details comments candidate"
+        "details sample-questions sample-questions"
+        "skills-assess sample-questions sample-questions"
+    ;
+
+    margin-bottom: 100px;
+}
+.candidate-info{
+    /* border: 1px solid chocolate; */
+    /* grid-column-start: 4;
+    grid-column-end: 5;     */
+    grid-area: candidate;
+}
+
+.candidate-info label {
+    font-size: 13px;
+    margin-right: 5px;
+    
+}
+
+.candidate-info select{
+    width: 155px;
+    border: none;
+    outline: none;
+}
+
+h2{
+    /* border: 1px solid hotpink; */
+    font-size: 1rem;
+}
+
+p {
+    font-size: 0.5rem;
+}
+.details{
+    /* border: 1px solid red; */
+    /* grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 3; */
+    grid-area: details;
+    background-color: rgba(255, 255, 255, 0.25); 
+
+}
+
+.details h2{
+    margin: 15px 0px 30px 15px;
+}
+
+#email{
+    font-size: 0.5rem;
+}
+
+.profile{
+    /* border: 1px solid blue; */
+    margin: 0px 15px 15px 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.profile img{
+    width: 50px;
+    height: 50px;
+    background-color: rgba(141, 231, 253, 0.445)
+}
+
+.profile-together{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.details p{
+    margin-left: 15px;
+    font-size: 0.65rem;
+}
+
+#profile-picture{
+    width: 60px;
+    height: 60px;
+    border: 3px  solid purple;
+    border-radius: 59px;
+    text-align: center;
+    padding-top: 10px;
+}
+
+.top-skills h2{
+    margin: 9px  15px;
+}
+
+.top-skills ul{
+    /* border: 1px solid red; */
+    width: 300px;
+    margin: 0px  55px;
+}
+
+.top-skills li{
+    font-size: 0.5em;
+}
+
+.top-projects h2{
+    margin: 9px  15px;
+}
+.top-projects ul{
+    /* width: 300px; */
+    margin: 0px  55px;
+}
+.top-projects li{
+    font-size: 0.5em;
+    color: rgba(0, 110, 255, 0.75) ;
+}
+
+.skills-assess{
+    /* border: 1px solid green; */
+    /* grid-column-start: 1;
+    grid-column-end: 2; */
+
+    grid-area: skills-assess;
+    background-color: rgba(255, 255, 255, 0.25); 
+}
+
+.skills-assess h2{
+    
+    margin: 9px 0px 15px 15px;
+}
+
+.skills-assess img{
+    width: 20px;
+    height: 20px;
+
+}
+
+.skills-assess #add-skill{
+    width: 90px;
+    height: 25px;
+    font-size: 13px;
+    background-color: rgb(117, 117, 117);
+    color: white;
+    padding: 5px;
+    padding-left: 18px;
+    margin-left: 100px;
+    margin-top: 20px;
+    border-radius: 3px;
+}
+.skills-assess select{
+    width: 150px;
+    height: 20px;
+    border: none;
+    margin-left: 20px;
+}
+#oop{
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+    
+}
+
+#oop p{
+    font-size: 13px;
+    margin-left: 20px;
+    margin-right: 50px;
+    background-color: white;
+    width: 20px;
+    height: 20px;
+    padding: 2px;
+}
+
+
+#js{
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+#js p{
+    font-size: 13px;
+    margin-left: 20px;
+    margin-right: 50px;
+    background-color: white;
+    width: 20px;
+    height: 20px;
+    padding: 2px;
+}
+
+#mvc{
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+#mvc p{
+    font-size: 13px;
+    margin-left: 20px;
+    margin-right: 50px;
+    background-color: white;
+    width: 20px;
+    height: 20px;
+    padding: 2px;
+}
+
+
+#scrum{
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+#scrum p{
+    font-size: 13px;
+    margin-left: 20px;
+    margin-right: 50px;
+    background-color: white;
+    width: 20px;
+    height: 20px;
+    padding: 2px;
+}
+
+
+.comments{
+    /* border: 1px solid blue; */
+    /* grid-column-start: 2;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 2; */
+    grid-area: comments;
+    display: flex;
+    
+}
+
+.comments textarea{
+      height: 89px;
+      padding-top: 0px;
+      font-size: 15px;
+      background-color: rgba(255, 255, 255, 0.438);
+      /* color: #36536B; */
+      mix-blend-mode: normal;
+      /* opacity: 0.5;       */
+      padding: 4px;
+      width: 250px;      
+      border: none;
+      /* border-bottom: 1px solid rgb(161, 161, 161); */
+      cursor: pointer;
+      resize: none;
+      font-family: 'Public Sans', sans-serif;
+}
+
+.button-rejAcc{
+    display: flex;
+}
+
+#reject{
+    background-color: rgba(255, 0, 0, 0.75);
+    font-size: 12px;
+    height: 20px;
+    width: 70px;
+    border-radius: 5px;
+    text-align: center;
+    padding-top: 4px;
+    color: white;
+    margin: 35px 20px 0px 20px;
+}
+
+#accept{
+    background-color: rgba(0, 110, 255, 0.75);
+    font-size: 12px;
+    height: 20px;
+    width: 70px;
+    border-radius: 5px;
+    text-align: center;
+    padding-top: 4px;
+    color: white;
+    margin-top: 35px;
+}
+
+.sample-question{
+    /* border: 1px solid red; */
+    /* grid-column-start: 2;
+    grid-column-end: 5;
+    grid-row-start: 2;
+    grid-row-end: 4; */
+    grid-area: sample-questions;
+    display: flex;
+    background-color: rgba(255, 255, 255, 0.25)
+}
+
+.desktop-question {
+    display: flex;
+}
+
+.mobile-question {
+    display: none;
+}
+.left-question{
+    /* border: 1px solid red; */
+}
+.left-question h2{
+    margin: 15px 15px 40px 45px;
+}
+
+.left-question form{
+    margin-bottom: 25px;
+}
+.left-question label{
+    margin: 20px 20px;
+    font-size: 10px;
+    color: rgb(41, 41, 41);
+}
+
+.left-question select{
+    width: 160px;
+    border: none;
+}
+
+.questions{
+    /* border: 1px solid green; */
+    /* background-color: rgba(255, 255, 255, 0.425); */
+}
+.left-question ul{
+    height: 266px;
+    margin-right: 60px;
+    margin-left: 20px;
+    margin-top: 40px;
+    color: rgb(41, 41, 41);
+    font-size: 10px;
+    border: 0.00001px solid rgba(255, 255, 255, 0);
+    background-color: rgba(255, 255, 255, 0.425);
+
+}
+
+.left-question li{    
+    margin: 15px 0px 3px 10px;
+    list-style-type: none;
+}
+.sub-questions{
+    /* border: 1px solid red; */
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    width: 300px;
+    height: 277px;
+    border-radius: 5px;
+    color: white;
+    margin-top: 120px;
+}
+
+.expectations{
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 2;
+    grid-row-end: 4;
+    background-color: rgba(0, 110, 255, 0.75);
+    color: white;
+}
+
+.expectations p{
+    font-size: 0.85rem;  
+    margin: 20px 0px 0px 25px; 
+}
+
+.expectations ul{
+    margin: 20px 0px 0px 40px;
+    width: 268px;
+}
+
+.expectations li{
+    list-style-type: none;
+    margin-bottom: 20px;
+    font-size: 13px;
+}
+
+.sub-questions #hThree{
+    
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    background-color: rgba(0, 110, 255, 0.9);
+}
+
+#hThree h3{
+    margin-top: 37px;
+    margin-left: 40px;
+    width: 248px;
+    height: 50px;
+    font-size: 13px;
+    padding: 2px;
+}
+
+@media only screen and (max-width: 480px) {
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    html{
+        font-family: 'Public Sans', sans-serif;
+    }
+    
+    body{
+    /* background-image: url('../images/home-bg-lg.png'); */
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    } 
+    
+    .container{
+        /* border: 1px solid black; */
+    }
+    
+    nav{
+        /* border: 1px solid red; */
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 360px;
+        height: 52px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 10px;
+        z-index: 100;
+        
+    }
+    
+    #logo{
+        /* border: 1px solid blue; */
+    }
+    
+    #desktop{
+        width: 250px;
+        height: 50px;
+        display: none;
+    }
+    #mobile{
+        height: 40px;
+        width: 40px;
+        display: block;
+    }
+    .navigation{
+        /* border: 1px solid green; */
+        width:  350px;
+        margin-left: 150px;
+        display: none;
+        
+    }
+
+    .navigation-mobile  {
+        display: block;
+    } 
+
+    .navigation-mobile ul{
+        display: flex;
+         position: relative;
+         /* top: 298px; 
+         right: 83px; */
+        margin: 0px;
+        width: 240px;
+        height: 223px;
+        justify-content: space-between;
+        /* align-items: center; */
+        /* box-shadow: 50; */
+        flex-direction: column;
+        border: 3px solid red;
+    }
+
+    .navigation-mobile ul li{
+        color: white;
+        font-size: 1.5rem;
+        list-style-type: none;
+    }
+
+    .navigation-mobile ul li a{
+        color: white;
+        text-decoration: none;
+    }
+
+    .drop-down{
+        display: flex;
+        position: relative;
+         right: 86px;
+        top: 291px;         
+        z-index: 10;
+       transition: right 1s ease;
+        width: 275px;
+        height: 667px;
+        background-color: rgba(29, 148, 228, 0.644);
+    }
+
+    .nav-container{
+        z-index: 100;
+        margin: 100px 27px 0px 24px;
+        width: 234px;
+        height: 217px;
+        background-color:  rgb(19, 0, 124);
+        border-bottom: 0px;
+        border-left: 0px;
+        border-right: 0px;
+        position: relative;
+        top:  0px;
+        right: 0px;
+    }
+    
+    
+    .navigation ul{    
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        
+    }
+    
+    .navigation ul li{
+        list-style-type: none;
+    }
+    
+    .navigation ul li a{
+        text-decoration: none;
+        color: black;
+    }
+    
+    .navigation ul li a::after {
+      color: skyblue;
+    }
+    
+    .navProfile {
+        /* border: 1px solid red; */
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        /* width: 115px; */
+        display: none;
+    }
+    
+    #navPicture{
+        width: 50px;
+        height: 50px;
+        border: 3px  solid purple;
+        border-radius: 59px;
+        text-align: center;
+        padding-top: 10px;
+        font-size: 1rem;
+    }
+    
+    #navName {
+        font-size: 1rem;
+    }
+    
+    #interview{
+        /* border: 1px solid yellow; */
+        display: block;
+        
+    }
+
+    #interview p{
+        font-size: 1.5rem;
+    }
+    
+    .menu{
+        /* border: 1px solid red; */
+        display: flex;
+        /* width: 360px;
+        height: 52px; */
+        z-index: 1;
+    }
+
+    
+    
+    h1{
+        /* border: 1px solid blueviolet; */
+        width: 230px;
+        color: rgb(29, 148, 228);
+        margin-left: 265px;
+        margin-top:80px;
+        margin-bottom: 50px;
+        font-size: 2em;
+    }
+    
+#live-interview{
+    display: none;
+}
+    
+    .interview-grid{
+        /* border: 1px solid blue; */
+        width: 375px;
+        /* height: 100vh; */
+        /* margin-left: 20px;
+        margin-top: 35px; */
+        margin: 35px 0px 20px 20px;
+        display: grid;
+        grid-gap: 1rem 5rem;
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.5fr 2fr 1fr 0.75fr 2.5fr;
+        grid-template-areas:
+            "candidate"
+            "details"
+            "skills-assess"
+            "comments"
+            "sample-questions"
+        ;
+    
+        margin-bottom: 100px;
+    }
+    .candidate-info{
+        /* border: 1px solid chocolate; */
+        /* grid-column-start: 4;
+        grid-column-end: 5;     */
+        grid-area: candidate;
+        width: 250px;
+        margin-left: 85px;
+    }
+    
+    .candidate-info label {
+        font-size: 13px;
+        margin-right: 5px;
+        
+    }
+    
+    .candidate-info select{
+        width: 155px;
+        border: none;
+        outline: none;
+    }
+    
+    h2{
+        /* border: 1px solid hotpink; */
+        font-size: 1rem;
+    }
+    
+    p {
+        font-size: 0.5rem;
+    }
+    .details{
+        /* border: 1px solid red; */
+        /* grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 1;
+        grid-row-end: 3; */
+        grid-area: details;
+        background-color: rgba(255, 255, 255, 0.25); 
+        width: 340px;
+        height: 240px;
+    
+    }
+    
+    .details h2{
+        margin: 5px 0px 10px 15px;
+        font-size: 1rem;
+    }
+    
+    #email{
+        font-size: 0.5rem;
+    }
+    
+    .profile{
+        /* border: 1px solid blue; */
+        margin: 0px 15px 15px 15px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    
+    .profile img{
+        width: 30px;
+        height: 30px;
+        background-color: rgba(141, 231, 253, 0.445)
+    }
+    
+    .profile-together{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    
+    .details p{
+        margin-left: 15px;
+        font-size: 0.65rem;
+    }
+    
+    #profile-picture{
+        width: 30px;
+        height: 30px;
+        border: 3px  solid purple;
+        border-radius: 59px;
+        text-align: center;
+        padding-top: 10px;
+    }
+    
+    .top-skills h2{
+        margin: 9px  15px;
+    }
+    
+    .top-skills ul{
+        /* border: 1px solid red; */
+        width: 300px;
+        margin: 0px  55px;
+    }
+    
+    .top-skills li{
+        font-size: 0.5em;
+    }
+    
+    .top-projects h2{
+        margin: 9px  15px;
+    }
+    .top-projects ul{
+        /* width: 300px; */
+        margin: 0px  55px;
+    }
+    .top-projects li{
+        font-size: 0.5em;
+        color: rgba(0, 110, 255, 0.75) ;
+    }
+    
+    .skills-assess{
+        /* border: 1px solid green; */
+        /* grid-column-start: 1;
+        grid-column-end: 2; */
+        width: 340px;
+        height: 210px;
+        grid-area: skills-assess;
+        background-color: rgba(255, 255, 255, 0.25); 
+    }
+    
+    .skills-assess h2{
+        
+        margin: 9px 0px 15px 15px;
+    }
+    
+    .skills-assess img{
+        width: 20px;
+        height: 20px;
+    
+    }
+    
+    .skills-assess #add-skill{
+        width: 90px;
+        height: 25px;
+        font-size: 13px;
+        background-color: rgb(117, 117, 117);
+        color: white;
+        padding: 5px;
+        padding-left: 18px;
+        margin-left: 100px;
+        margin-top: 20px;
+        border-radius: 3px;
+    }
+    .skills-assess select{
+        width: 150px;
+        height: 20px;
+        border: none;
+        margin-left: 20px;
+    }
+    #oop{
+        display: flex;
+        align-items: center;
+        margin-bottom: 5px;
+        
+    }
+    
+    #oop p{
+        font-size: 13px;
+        margin-left: 20px;
+        margin-right: 50px;
+        background-color: white;
+        width: 20px;
+        height: 20px;
+        padding: 2px;
+    }
+    
+    
+    #js{
+        display: flex;
+        align-items: center;
+        margin-bottom: 5px;
+    }
+    
+    #js p{
+        font-size: 13px;
+        margin-left: 20px;
+        margin-right: 50px;
+        background-color: white;
+        width: 20px;
+        height: 20px;
+        padding: 2px;
+    }
+    
+    #mvc{
+        display: flex;
+        align-items: center;
+        margin-bottom: 5px;
+    }
+    
+    #mvc p{
+        font-size: 13px;
+        margin-left: 20px;
+        margin-right: 50px;
+        background-color: white;
+        width: 20px;
+        height: 20px;
+        padding: 2px;
+    }
+    
+    
+    #scrum{
+        display: flex;
+        align-items: center;
+        margin-bottom: 5px;
+    }
+    
+    #scrum p{
+        font-size: 13px;
+        margin-left: 20px;
+        margin-right: 50px;
+        background-color: white;
+        width: 20px;
+        height: 20px;
+        padding: 2px;
+    }
+    
+    
+    .comments{
+        /* border: 1px solid blue; */
+        /* grid-column-start: 2;
+        grid-column-end: 4;
+        grid-row-start: 1;
+        grid-row-end: 2; */
+        grid-area: comments;
+        display: flex;
+        flex-direction: column;
+        width: 340px;
+        
+    }
+    
+    .comments textarea{
+          height: 89px;
+          padding-top: 0px;
+          font-size: 15px;
+          background-color: rgba(255, 255, 255, 0.438);
+          /* color: #36536B; */
+          mix-blend-mode: normal;
+          /* opacity: 0.5;       */
+          padding: 4px;
+          width: 250px;      
+          border: none;
+          /* border-bottom: 1px solid rgb(161, 161, 161); */
+          cursor: pointer;
+          resize: none;
+          font-family: 'Public Sans', sans-serif;
+    }
+    
+    .button-rejAcc{
+        display: flex;
+        margin-top: 15px;
+        justify-content: space-between;
+        align-items: center;
+        width: 185px;
+    }
+    #reject{
+        background-color: rgba(255, 0, 0, 0.75);
+        font-size: 12px;
+        height: 20px;
+        width: 70px;
+        border-radius: 5px;
+        text-align: center;
+        padding-top: 4px;
+        color: white;
+        margin: 5px 0px 0px 0px;
+    }
+    
+    #accept{
+        background-color: rgba(0, 110, 255, 0.75);
+        font-size: 12px;
+        height: 20px;
+        width: 70px;
+        border-radius: 5px;
+        text-align: center;
+        padding-top: 4px;
+        color: white;
+        margin-top: 5px;
+    }
+    
+    .sample-question{
+        /* border: 1px solid red; */
+        /* grid-column-start: 2;
+        grid-column-end: 5;
+        grid-row-start: 2;
+        grid-row-end: 4; */
+        grid-area: sample-questions;
+        display: flex;
+        flex-direction: column;
+        background-color: rgba(255, 255, 255, 0.25);
+        width: 340px;
+        
+    }
+
+    .desktop-question{
+        display: none;
+    }
+
+    .mobile-question{
+        display: block;
+    }
+    
+    .left-question{
+        /* border: 1px solid red; */
+    }
+    .left-question h2{
+        margin: 15px 15px 8px 45px;
+    }
+    
+    .left-question form{
+        margin-bottom: 25px;
+    }
+    .left-question label{
+        margin: 20px 20px;
+        font-size: 10px;
+        color: rgb(41, 41, 41);
+    }
+    
+    .left-question select{
+        width: 160px;
+        border: none;
+    }
+    
+    .left-question ul{
+        background-color: rgba(255, 255, 255, 0.425);
+        height: 90px;
+        margin-right: 60px;
+        margin-left: 20px;
+        margin-top: 4px;
+        color: rgb(41, 41, 41);
+        font-size: 10px;
+        /* border: 1px solid green; */
+    }
+    
+    .left-question li{    
+        margin: 15px 0px 3px 10px;
+        list-style-type: none;
+    }
+    .sub-questions{
+        border: 1px solid green;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        width: 260px;
+        height: 170px;
+        border-radius: 5px;
+        color: white;
+        margin-top: 15px;
+        margin-left: 32px;
+    }
+    
+    .expectations{
+        grid-column-start: 1;
+        grid-column-end: 4;
+        grid-row-start: 2;
+        grid-row-end: 4;
+        background-color: rgba(0, 110, 255, 0.75);
+        color: white;
+    }
+    
+    .expectations p{
+        font-size: 0.85rem;  
+        margin: 20px 0px 0px 25px; 
+    }
+    
+    .expectations ul{
+        margin: 20px 0px 0px 40px;
+        width: 268px;
+    }
+    
+    .expectations li{
+        list-style-type: none;
+        margin-bottom: 20px;
+        font-size: 13px;
+    }
+    
+    .sub-questions #hThree{
+        height: 70px;
+        grid-column-start: 1;
+        grid-column-end: 4;
+        grid-row-start: 1;
+        grid-row-end: 2;
+        background-color: rgba(0, 110, 255, 0.9);
+    }
+    
+    #hThree h3{
+        margin-top: 17px;
+        margin-left: 10px;
+        width: 248px;
+        height: 50px;
+        font-size: 13px;
+        padding: 2px;
+    }
+    
+}

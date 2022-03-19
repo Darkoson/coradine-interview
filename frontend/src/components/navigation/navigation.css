@@ -1,0 +1,47 @@
+
+img {
+  max-width: 100%;
+}
+
+.Navigation {
+  display: flex;
+  justify-content: space-between;
+  /* border: 1px solid red; */
+  padding: 50px 0px;
+  position: relative;
+  align-items: center;
+}
+
+.Navigation .brand {
+  width: 300px;
+}
+
+.Navigation nav {
+  display: flex;
+  gap: 50px;
+}
+
+.Navigation nav ul {
+  padding: 0px;
+  margin: 0px;
+}
+
+.Navigation nav ul li {
+  display: inline-block;
+  margin-right: 30px;
+  font-size: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.UserProfile {
+  display: flex;
+  align-items: center;
+}
+
+.UserProfile .UserImage {
+  width: 40px;
+  height: 40px;
+  border: 1px solid red;
+  border-radius: 20px;
+  margin-left: 20px;
+}

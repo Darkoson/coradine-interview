@@ -1,0 +1,609 @@
+
+.sign {
+  margin-top: 50px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.sign .interview {
+  width: 300px;
+  font-size: 20px;
+}
+
+.sign .form {
+  margin-top: 50px;
+  padding-top: 20px;
+  background-color: rgba(246, 246, 255, 0.5);
+  border-radius: 5px;
+  width: 250px;
+  height: 400px;
+  text-align: center;
+  font-size: 14px;
+}
+
+.form h1 {
+  margin-bottom: 50px;
+}
+
+.form #firstname {
+  margin-bottom: 20px;
+}
+
+.form #lastname {
+  margin-bottom: 20px;
+}
+
+.form .role {
+  display: flex;
+  justify-content: space-between;
+  margin-left: 20px;
+  margin-right: 20px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.form .email {
+  margin-bottom: 20px;
+}
+
+#email {
+  /* background: url(/assets/mail-b.png) no-repeat; */
+  background-size: 15px;
+  padding-left: 25px;
+  padding-right: 25px;
+  background-color: white;
+  margin-left: 20px;
+  margin-right: 20px;
+  width: 150px;
+  color: gray;
+}
+
+.form #pw {
+  margin-bottom: 20px;
+}
+
+#pw {
+  /* background: url(/assets/lock.png) no-repeat; */
+  background-size: 15px;
+  padding-left: 25px;
+  padding-right: 25px;
+  background-color: white;
+  margin-left: 20px;
+  margin-right: 20px;
+  width: 150px;
+}
+
+.form input {
+  border-radius: 5px;
+  color: rgb(139, 136, 136);
+}
+
+.form .already {
+  display: flex;
+  font-size: 10px;
+  margin-left: 10px;
+  margin-right: 12px;
+  justify-content: space-between;
+}
+
+.already a {
+  text-decoration: none;
+}
+
+.role #user {
+  background-color: white;
+  color: rgb(139, 136, 136);
+}
+
+.connect #in {
+  background-color: white;
+  width: 210px;
+  height: 30px;
+  border-radius: 5%;
+  background-color: #5dade2;
+  color: white;
+}
+
+/* media queries */
+
+@media only screen and (max-width: 430px) {
+  body {
+    font-family: "Public Sans";
+    /* background: url(/assets/login-bg-lg.png) no-repeat; */
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 40px;
+  }
+
+  header {
+    display: flex;
+    justify-content: center;
+  }
+
+  .sign {
+    width: 300px;
+    margin-top: 80px;
+    margin-left: 50px;
+    margin-left: 50px;
+    display: block;
+    text-align: left;
+  }
+
+  .sign .interview {
+    font-size: 16px;
+    margin-left: 30px;
+  }
+
+  .sign .form {
+    margin-top: 50px;
+    background-color: rgba(246, 246, 255, 0.5);
+    border-radius: 5px;
+    width: 300px;
+    height: 400px;
+    margin-left: 20px;
+    margin-right: 20px;
+    text-align: center;
+    font-size: 14px;
+  }
+
+  .form h1 {
+    margin-bottom: 50px;
+    padding-top: 20px;
+  }
+
+  .form #firstname {
+    margin-bottom: 20px;
+  }
+
+  .form #lastname {
+    margin-bottom: 20px;
+  }
+
+  .form .role {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 45px;
+    margin-right: 45px;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .form .email {
+    margin-bottom: 20px;
+  }
+
+  #email {
+    /* background: url(/assets/mail-b.png) no-repeat; */
+    background-size: 15px;
+    padding-left: 25px;
+    padding-right: 25px;
+    background-color: white;
+    margin-left: 20px;
+    margin-right: 20px;
+    width: 150px;
+    color: gray;
+  }
+
+  .form #pw {
+    margin-bottom: 20px;
+  }
+
+  #pw {
+    /* background: url(/assets/lock.png) no-repeat; */
+    background-size: 15px;
+    padding-left: 25px;
+    padding-right: 25px;
+    background-color: white;
+    margin-left: 20px;
+    margin-right: 20px;
+    width: 150px;
+  }
+
+  .form input {
+    border-radius: 5px;
+    color: rgb(139, 136, 136);
+  }
+
+  .form .already {
+    display: flex;
+    font-size: 10px;
+    margin-left: 10px;
+    margin-right: 12px;
+    justify-content: space-between;
+  }
+
+  .already a {
+    text-decoration: none;
+  }
+
+  .role #user {
+    background-color: white;
+    color: rgb(139, 136, 136);
+  }
+
+  .connect #in {
+    background-color: white;
+    width: 210px;
+    height: 30px;
+    border-radius: 5%;
+    background-color: #5dade2;
+    color: white;
+  }
+}
+
+/* mobile view */
+
+@media only screen and (max-width: 390px) {
+  body {
+    font-family: "Public Sans";
+    /* background: url(/assets/login-bg-lg.png) no-repeat; */
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 40px;
+  }
+
+  header {
+    display: flex;
+    justify-content: center;
+  }
+
+  .sign {
+    width: 250px;
+    margin-top: 80px;
+    margin-left: 25px;
+    margin-left: 25px;
+    display: block;
+    text-align: left;
+  }
+
+  .sign .interview {
+    margin-left: 30px;
+    font-size: 16px;
+  }
+
+  .sign .form {
+    margin-top: 50px;
+    background-color: rgba(246, 246, 255, 0.5);
+    border-radius: 5px;
+    width: 300px;
+    height: 400px;
+    margin-left: 20px;
+    margin-right: 20px;
+    text-align: center;
+    font-size: 14px;
+  }
+
+  .form h1 {
+    margin-bottom: 50px;
+    padding-top: 20px;
+  }
+
+  .form #firstname {
+    margin-bottom: 20px;
+  }
+
+  .form #lastname {
+    margin-bottom: 20px;
+  }
+
+  .form .role {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 45px;
+    margin-right: 45px;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .form .email {
+    margin-bottom: 20px;
+  }
+
+  #email {
+    /* background: url(/assets/mail-b.png) no-repeat; */
+    background-size: 15px;
+    padding-left: 25px;
+    padding-right: 25px;
+    background-color: white;
+    margin-left: 20px;
+    margin-right: 20px;
+    width: 150px;
+    color: gray;
+  }
+
+  .form #pw {
+    margin-bottom: 20px;
+  }
+
+  #pw {
+    /* background: url(/assets/lock.png) no-repeat; */
+    background-size: 15px;
+    padding-left: 25px;
+    padding-right: 25px;
+    background-color: white;
+    margin-left: 20px;
+    margin-right: 20px;
+    width: 150px;
+  }
+
+  .form input {
+    border-radius: 5px;
+    color: rgb(139, 136, 136);
+  }
+
+  .form .already {
+    display: flex;
+    font-size: 10px;
+    margin-left: 10px;
+    margin-right: 12px;
+    justify-content: space-between;
+  }
+
+  .already a {
+    text-decoration: none;
+  }
+
+  .role #user {
+    background-color: white;
+    color: rgb(139, 136, 136);
+  }
+
+  .connect #in {
+    background-color: white;
+    width: 210px;
+    height: 30px;
+    border-radius: 5%;
+    background-color: #5dade2;
+    color: white;
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  body {
+    font-family: "Public Sans";
+    /* background: url(/assets/login-bg-lg.png) no-repeat; */
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 40px;
+  }
+
+  header {
+    display: flex;
+    justify-content: center;
+  }
+
+  .sign {
+    width: 360px;
+    margin-top: 80px;
+    margin-left: 25px;
+    margin-left: 25px;
+    display: block;
+    text-align: left;
+  }
+
+  .sign .interview {
+    margin-left: 40px;
+    font-size: 16px;
+  }
+
+  .sign .form {
+    margin-top: 50px;
+    background-color: rgba(246, 246, 255, 0.5);
+    border-radius: 5px;
+    width: 280px;
+    height: 400px;
+    margin-left: 20px;
+    margin-right: 20px;
+    text-align: center;
+    font-size: 14px;
+  }
+
+  .form h1 {
+    margin-bottom: 50px;
+    padding-top: 20px;
+  }
+
+  .form #firstname {
+    margin-bottom: 20px;
+  }
+
+  .form #lastname {
+    margin-bottom: 20px;
+  }
+
+  .form .role {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 45px;
+    margin-right: 45px;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .form .email {
+    margin-bottom: 20px;
+  }
+
+  #email {
+    /* background: url(/assets/mail-b.png) no-repeat; */
+    background-size: 15px;
+    padding-left: 25px;
+    padding-right: 25px;
+    background-color: white;
+    margin-left: 20px;
+    margin-right: 20px;
+    width: 150px;
+    color: gray;
+  }
+
+  .form #pw {
+    margin-bottom: 20px;
+  }
+
+  #pw {
+    /* background: url(/assets/lock.png) no-repeat; */
+    background-size: 15px;
+    padding-left: 25px;
+    padding-right: 25px;
+    background-color: white;
+    margin-left: 20px;
+    margin-right: 20px;
+    width: 150px;
+  }
+
+  .form input {
+    border-radius: 5px;
+    color: rgb(139, 136, 136);
+  }
+
+  .form .already {
+    display: flex;
+    font-size: 10px;
+    margin-left: 10px;
+    margin-right: 12px;
+    justify-content: space-between;
+  }
+
+  .already a {
+    text-decoration: none;
+  }
+
+  .role #user {
+    background-color: white;
+    color: rgb(139, 136, 136);
+  }
+
+  .connect #in {
+    background-color: white;
+    width: 210px;
+    height: 30px;
+    border-radius: 5%;
+    background-color: #5dade2;
+    color: white;
+  }
+}
+
+@media only screen and (max-width: 330px) {
+  body {
+    font-family: "Public Sans";
+    /* background: url(/assets/login-bg-lg.png) no-repeat; */
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 40px;
+  }
+
+  header {
+    display: flex;
+    justify-content: center;
+  }
+
+  .sign {
+    width: 300px;
+    margin-top: 80px;
+    margin-left: 20px;
+    margin-left: 20px;
+    display: block;
+    text-align: left;
+  }
+
+  .sign .interview {
+    margin-left: 20px;
+    font-size: 16px;
+  }
+
+  .sign .form {
+    margin-top: 50px;
+    background-color: rgba(246, 246, 255, 0.5);
+    border-radius: 5px;
+    width: 250px;
+    height: 400px;
+    margin-left: 15px;
+    margin-right: 15px;
+    text-align: center;
+    font-size: 14px;
+  }
+
+  .form h1 {
+    margin-bottom: 50px;
+    padding-top: 20px;
+  }
+
+  .form #firstname {
+    margin-bottom: 20px;
+  }
+
+  .form #lastname {
+    margin-bottom: 20px;
+  }
+
+  .form .role {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 25px;
+    margin-right: 25px;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .form .email {
+    margin-bottom: 20px;
+  }
+
+  #email {
+    /* background: url(/assets/mail-b.png) no-repeat; */
+    background-size: 15px;
+    padding-left: 25px;
+    padding-right: 25px;
+    background-color: white;
+    margin-left: 20px;
+    margin-right: 20px;
+    width: 150px;
+    color: gray;
+  }
+
+  .form #pw {
+    margin-bottom: 20px;
+  }
+
+  #pw {
+    /* background: url(/assets/lock.png) no-repeat; */
+    background-size: 15px;
+    padding-left: 25px;
+    padding-right: 25px;
+    background-color: white;
+    margin-left: 20px;
+    margin-right: 20px;
+    width: 150px;
+  }
+
+  .form input {
+    border-radius: 5px;
+    color: rgb(139, 136, 136);
+  }
+
+  .form .already {
+    display: flex;
+    font-size: 10px;
+    margin-left: 10px;
+    margin-right: 12px;
+    justify-content: space-between;
+  }
+
+  .already a {
+    text-decoration: none;
+  }
+
+  .role #user {
+    background-color: white;
+    color: rgb(139, 136, 136);
+  }
+
+  .connect #in {
+    background-color: white;
+    width: 210px;
+    height: 30px;
+    border-radius: 5%;
+    background-color: #5dade2;
+    color: white;
+  }
+}

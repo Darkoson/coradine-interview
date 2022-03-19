@@ -1,0 +1,132 @@
+
+.top {
+  width: 700px;
+  margin-left: 200px;
+  margin-right: 350px;
+  border-bottom: 1px solid rgb(192, 188, 188);
+}
+
+.table-head {
+  width: 400px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  /* margin-left: 200px; */
+  /* border-bottom: 1px solid gray; */
+}
+
+.confirmed {
+  display: flex;
+}
+
+.application {
+  margin-top: 10px;
+}
+
+.confirmed #firm {
+  padding-top: 10px;
+}
+
+.confirmed .number {
+  margin-left: 20px;
+  background: rgba(221, 221, 244, 0.5);
+  padding-top: 5px;
+  padding-left: 5px;
+  padding-right: 2px;
+  padding-bottom: 2px;
+  color: blue;
+  font-size: 14px;
+  margin-top: 20px;
+}
+
+/* for table */
+table {
+  border-collapse: separate;
+  border-spacing: 0 10px;
+  font-size: 14px;
+  line-height: 5px;
+  /* border: 1px solid green; */
+}
+
+th {
+  font-size: 14px;
+}
+
+td {
+  font-size: 12px;
+}
+
+th,
+td {
+  width: 400px;
+  text-align: left;
+  border-bottom: 1px solid rgba(234, 234, 249);
+  padding-right: 60px;
+}
+
+.check {
+  margin-right: 30px;
+}
+
+.up {
+  display: flex;
+  justify-content: space-between;
+  /* text-align: right; */
+  width: 350px;
+  margin-left: 250px;
+  margin-bottom: 50px;
+}
+
+.up label {
+  margin-right: 20px;
+  margin-left: 10px;
+  font-size: 12px;
+}
+
+#user {
+  background: white;
+  width: 100px;
+  border-radius: 5px;
+  margin-right: 10px;
+  font-size: 12px;
+}
+
+button {
+  width: 100px;
+  background-color: #4287f5;
+  color: white;
+  border-radius: 5px;
+  margin-left: 10px;
+}
+
+.tips {
+  /* border: 1px solid green; */
+  margin-top: 50px;
+  width: 700px;
+  margin-left: 200px;
+  border-radius: 5px;
+  background-color: rgba(234, 234, 249, 0.5);
+  margin-bottom: 100px;
+  padding-top: 20px;
+}
+
+.icons {
+  display: flex;
+  justify-content: space-between;
+  width: 100px;
+  color: blue;
+  /* size: 30px; */
+  margin-top: 50px;
+  margin-left: 500px;
+  background-color: rgb(169, 208, 241, 0.5);
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.for-select {
+  display: flex;
+  margin-left: 200px;
+  margin-bottom: 40px;
+  margin-top: 40px;
+  border-radius: 5px;
+}
