@@ -6,7 +6,6 @@ img {
 .Navigation {
   display: flex;
   justify-content: space-between;
-  /* border: 1px solid red; */
   padding: 50px 0px;
   position: relative;
   align-items: center;
@@ -33,6 +32,11 @@ img {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+.Navigation nav ul li a {
+  text-decoration: none;
+  color: #000;
+}
+
 .UserProfile {
   display: flex;
   align-items: center;
@@ -44,4 +48,90 @@ img {
   border: 1px solid red;
   border-radius: 20px;
   margin-left: 20px;
+}
+
+.MobileNav, .MobileLogo, .MenuIcon {
+  display: none;
+}
+
+@media screen and (max-width: 1300px) {
+  .Navigation {
+    display: block;
+  }
+
+  .Navigation .brand {
+    margin: 0px auto 20px;
+  }
+
+  .Navigation nav {
+    display: flex;
+    /* justify-content: space-between; */
+    max-width: fit-content;
+    margin: auto;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .Navigation {
+    position: relative;
+    display: flex;
+    padding: 10px 20px;
+    width: 100%;
+  }
+
+  .Navigation nav {
+    display: none;
+  }
+
+  .Navigation .brand {
+    width: 80px;
+    margin: 0px;
+  }
+
+  .DesktopLogo {
+    display: none;
+  }
+
+  .MobileNav, .MobileLogo, .MenuIcon {
+    display: block;
+  }
+
+  .MobileNav {
+    padding: 20px 50px;
+    position: absolute;
+    right: -500px;
+    height: 100vh;
+    top: 0px;
+    background-color: blue;
+    color: #fff;
+    transition: right 200ms ease-out;
+  }
+
+  .MobileNav.active {
+    right: 0px;
+  }
+
+  .MobileNav .close {
+    position: absolute;
+    right: 20px;
+    top: 10px;
+  }
+
+  .MobileNav ul {
+    margin-top: 30px;
+  }
+
+  .MobileNav ul li {
+    margin-bottom: 20px;
+  }
+
+  
+
+  .MobileNav ul {
+    padding: 0px;
+  }
+
+  .MobileNav ul li {
+    list-style: none;
+  }
 }

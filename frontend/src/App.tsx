@@ -1,14 +1,14 @@
 // import { Link } from "react-router-dom";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Outlet } from "react-router-dom";
 
 import "./App.css";
 import MenuLinks from "./components/navigation/menus";
 import Navigation from "./components/navigation/Navigation";
-import ApplicationPage from "./pages/applicants/ApplicationPage";
+import ApplicantsPage from "./pages/applicants/ApplicantsPage";
 import CandidateConfirmationPage from "./pages/candidate/CandidateConfirmationPage";
 import InterviewPage from "./pages/interview/InterviewPage";
 import LandingPage from "./pages/landing/LandingPage";
-import SettingPage from "./pages/settings/SettingPage";
+import SettingsPage from "./pages/settings/SettingsPage";
 
 // import logoMobile from "./logo.png";
 // import logoDesktop from "./logo-coradine.png";
@@ -17,26 +17,46 @@ function App() {
   return (
     <>
       <BrowserRouter>
-    
-
-        <Navigation />
-
+        
         <Routes>
-          <Route path={MenuLinks.landing.path} element={<LandingPage />} />
+          <Route path="/" element={<LandingPage />} />
+          
           <Route
-            path={MenuLinks.candidateProfile.path}
+            path="/candidate-preparation"
             element={<CandidateConfirmationPage />}
           />
-          <Route
-            path={MenuLinks.applicants.path}
-            element={<ApplicationPage />}
-          />
-          <Route path={MenuLinks.interview.path} element={<InterviewPage />} />
-          <Route path={MenuLinks.settings.path} element={<SettingPage />} />
+
+          <Route path="/usr" element={<Home />}>
+            <Route
+              path={"applicants"}
+              element={<ApplicantsPage />}
+            />
+
+            <Route
+              path={"interview"}
+              element={<InterviewPage />}
+            />
+            <Route
+              path={"settings"}
+              element={<SettingsPage />}
+            />
+          </Route>
+
+          <Route path="*" element={<LandingPage />} />
         </Routes>
       </BrowserRouter>
     </>
   );
 }
+
+const Home = () => (
+  <>
+    <div className="home-bg">
+      <Navigation />
+    home is here
+      <Outlet />
+    </div>
+  </>
+);
 
 export default App;

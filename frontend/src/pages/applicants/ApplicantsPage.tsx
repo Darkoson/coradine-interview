@@ -1,6 +1,6 @@
 import React, { FC } from "react";
 import "./applicants.css";
-const ApplicationPage: FC = () => (
+const ApplicantsPage: FC = () => (
   <>
     <section className="top">
       <div className="table-head">
@@ -218,4 +218,4 @@ const ApplicationPage: FC = () => (
   </>
 );
 
-export default ApplicationPage;
+export default ApplicantsPage;

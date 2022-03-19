@@ -1,9 +1,9 @@
 const MenuLinks = {
   landing: { name: "Landing", path: "/" },
-  interview: { name: "Interview", path: "interviews" },
+  interview: { name: "Interview", path: "interview" },
   applicants: { name: "Applicants", path: "applicants" },
   settings: { name: "Settings", path: "settings" },
-  candidateProfile: { name: "candidate", path: "candidate-profile" },
+  candidateProfile: { name: "For Candidate", path: "/candidate-preparation" },
 };
 
 export default MenuLinks;

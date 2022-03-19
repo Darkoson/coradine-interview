@@ -2,40 +2,38 @@ import React from "react";
 import { Link } from "react-router-dom";
 import MenuLinks from "./menus";
 import "./navigation.css";
-import logo from "./logo-coradine.png";
+import logo from "../../assets/logo-coradine.png";
+import logoMobile from "../../assets/logo.png";
 
 const Navigation = () => (
   <div className="Navigation">
     <div className="brand">
-      <img src={logo} alt="Brand Logo" />
+      <Link to={MenuLinks.landing.path}>
+        <img src={logo} className="DesktopLogo" alt="Brand Logo" />
+        <img src={logoMobile} className="MobileLogo" alt="" />
+      </Link>
     </div>
+
+    <div className="MenuIcon">Menu</div>
+
     <nav>
       <ul>
-          <li>
-            <Link to={MenuLinks.landing.path}>
-              {MenuLinks.landing.name}
-            </Link>
-          </li>
-          <li>
-            <Link to={MenuLinks.applicants.path}>
-              {MenuLinks.applicants.name}
-            </Link>
-          </li>
-          <li>
-            <Link to={MenuLinks.interview.path}>
-              {MenuLinks.interview.name}
-            </Link>
-          </li>
-          <li>
-            <Link to={MenuLinks.settings.path}>
-            {MenuLinks.settings.name}
-            </Link>
-          </li>
-          <li>
-            <Link to={MenuLinks.candidateProfile.path}>
+        <li>
+          <Link to={MenuLinks.applicants.path}>
+            {MenuLinks.applicants.name}
+          </Link>
+        </li>
+        <li>
+          <Link to={MenuLinks.interview.path}>{MenuLinks.interview.name}</Link>
+        </li>
+        <li>
+          <Link to={MenuLinks.settings.path}>{MenuLinks.settings.name}</Link>
+        </li>
+        <li>
+          <Link to={MenuLinks.candidateProfile.path}>
             {MenuLinks.candidateProfile.name}
-            </Link>
-          </li>
+          </Link>
+        </li>
       </ul>
 
       <div className="UserProfile">
@@ -43,6 +41,16 @@ const Navigation = () => (
         <div className="UserImage"></div>
       </div>
     </nav>
+
+    <div className="MobileNav active">
+      <div className="close">X</div>
+      <ul>
+        <li>Applications</li>
+        <li>Interviews</li>
+        <li>Settings</li>
+        <li>For Candidate</li>
+      </ul>
+    </div>
   </div>
 );
 

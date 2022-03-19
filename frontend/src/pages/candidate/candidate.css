@@ -10,12 +10,17 @@
   font-family: "Public Sans";
 }
 
-nav a {
+/* nav a {
   display: flex;
   width: 200px;
   margin: 40px;
-}
+} */
 
+a.Logo {
+  display: block;
+  margin: 10px auto;
+  max-width: fit-content;
+}
 .main {
   width: 470px;
   text-align: center;
