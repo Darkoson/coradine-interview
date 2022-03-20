@@ -3,6 +3,7 @@
 <h1 align="center">Coradine Interview System</h1>
 
 <br>
+![screenshot](preview1.png)
 
 <div align="center">
   <h3>
@@ -27,19 +28,15 @@
 ## Table of Contents
 
 - [Overview](#overview)
-  - [Built With](#built-with)
 - [Features](#features)
+- [About the Project](#about-the-project)
+- [Tasks](#how-to-use)
+- [Built With](#built-with)
 - [How to use](#how-to-use)
-- [Contact](#contact)
-- [Acknowledgements](#acknowledgements)
 
 <!-- OVERVIEW -->
 
 ## Overview
-
-![screenshot](preview1.png)
-
-## Introduction :
 
 This application allows selected candidates for interview to inform their interviews about their area of strength and also allows the interviewer to conduct a live interview.
 
@@ -53,13 +50,13 @@ This application allows selected candidates for interview to inform their interv
 - Scheduling of interview
 - Live interview session with questions
 
-## About the Project :
+## About the Project
 
 <div align="center">
    This project is a challenge that I gave to myself, to build something ( in 1 week ) to show case of my full stack skills for apply for the position of  <b> Node skills developer at Coradine Aviation <b>. 
 </div>
 
-## Tasks :
+## Tasks
 
 - Prototype : Consist of conceiving and designing the UI/UX of this project idea using Adobe XD
 
@@ -83,7 +80,7 @@ To clone and run this application, you'll need [Git](https://git-scm.com) and [N
 
 ```bash
 # Clone this repository
-$ git clone https://github.com/Darkoson/daba-auth-test.git
+$ git clone https://github.com/Darkoson/coradine-interview.git
 
 # From root directory: Install backend dependencies and run it
 $ cd backend
