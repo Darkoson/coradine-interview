@@ -7,7 +7,7 @@ import { CandidateInput } from "../types";
 class CandidateResolver {
   constructor(private candidateService: CandidateService) {
     this.candidateService = new CandidateService();
-  }
+  } 
 
   @Mutation(() => Candidate)
   createCandidate(@Arg("input") input: CandidateInput) {

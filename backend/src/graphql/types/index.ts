@@ -54,3 +54,10 @@ export class CandidateInput {
   @Field(() => String, { nullable: true })
   skillSet: string;
 }
+
+// import { createUnionType } from "type-graphql";
+
+// const SearchResultUnion = createUnionType({
+//   name: "SearchResult", // the name of the GraphQL union
+//   types: () => [CandidateInput, ] as const, // function that returns tuple of object types classes
+// });

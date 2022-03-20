@@ -53,9 +53,7 @@ This application allows selected candidates for interview to inform their interv
 
 ## About the Project
 
-<div align="center">
-   This project is a challenge that I gave to myself, to build something ( in 1 week ) to show case of my full stack skills for apply for the position of  <b> Node skills developer at Coradine Aviation <b>. 
-</div>
+This project is a challenge that I gave to myself, to build something ( in 1 week ) to show case of my full stack skills for applying for the position of <b> Node skills developer at Coradine Aviation <b>.
 
 ## Tasks
 

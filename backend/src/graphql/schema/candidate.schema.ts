@@ -18,16 +18,16 @@ export default class Candidate {
   @prop({ required: true })
   email: string;
 
-  @Field(() => String)
-  @prop({ required: true })
+  @Field(() => String, { nullable: true })
+  @prop()
   firstName: string;
 
-  @Field(() => String)
-  @prop({ required: true })
+  @Field(() => String, { nullable: true })
+  @prop()
   lastName: string;
 
-  @Field(() => String)
-  @prop({ required: true })
+  @Field(() => String, { nullable: true })
+  @prop()
   position: string;
 
   @Field(() => String, { nullable: true })

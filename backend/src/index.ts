@@ -6,6 +6,7 @@ import dotenv from "dotenv";
 dotenv.config();
 
 import { connectToDatabase } from "./utilities/database";
+import cors from "cors";
 //import { getApolloServerStarted } from "./utilities/server";
 
 import { ApolloServer } from "apollo-server-express";
@@ -29,6 +30,7 @@ async function bootstrapApplication() {
 
   const app = express();
   app.use(cookieParser());
+  app.use(cors({ origin: "*" }));
 
   const apolloServer = new ApolloServer({
     schema,
@@ -51,7 +53,8 @@ async function bootstrapApplication() {
   });
 
   await apolloServer.start();
-  apolloServer.applyMiddleware({ app });
+  apolloServer.applyMiddleware({ app, cors: false });
+  //apolloServer.applyMiddleware({ app, cors: false });
 
   // const { app, apolloServer } = await getApolloServerStarted();
   //apolloServer.applyMiddleware({ app });

@@ -51,8 +51,12 @@ export class CandidateService {
     return result;
   }
 
-  async findCandidates(input: CandidateInput): Promise<Candidate[]> {
-    const result = await CandidateModel.find({ ...input }).lean();
+  async findCandidates(input: CandidateInput | null): Promise<Candidate[]> {
+   
+    const document =  (input)? CandidateModel.find({ ...input }) : CandidateModel.find();
+    const result = await document.lean();
+    console.log(result.length);
+    
     return result;
   }
 }
