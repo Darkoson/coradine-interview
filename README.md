@@ -2,8 +2,8 @@
 
 <h1 align="center">Coradine Interview System</h1>
 
-<br>
 ![screenshot](preview1.png)
+<br>
 
 <div align="center">
   <h3>
@@ -21,6 +21,7 @@
     
   </h3>
 </div>
+
 <br>
 
 <!-- TABLE OF CONTENTS -->
