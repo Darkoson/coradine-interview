@@ -1,5 +1,8 @@
 import React, { FC } from "react";
+import CreateCandidateForm from "../../components/candidate/create-form/create-candidate-form";
+
 import "./applicants.css";
+
 const ApplicantsPage: FC = () => (
   <>
     <section className="top">
@@ -20,6 +23,8 @@ const ApplicantsPage: FC = () => (
         </div>
       </div>
     </section>
+
+    <CreateCandidateForm />
 
     <section className="selected-applications">
       <section className="for-select">
@@ -137,7 +142,6 @@ const ApplicantsPage: FC = () => (
         </div>
       </div>
     </section>
-
     <section className="confirmed-application">
       <div className="tips">
         <div className="up">

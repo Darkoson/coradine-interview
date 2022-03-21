@@ -5,7 +5,7 @@ import {
   QueryMethod,
 } from "@typegoose/typegoose";
 import { Field, ObjectType } from "type-graphql";
-import { AsQueryMethod, QueryHelperThis } from "@typegoose/typegoose/lib/types";
+import { AsQueryMethod, QueryHelperThis } from "@typegoose/typegoose/lib/types"; 
 
 @QueryMethod(findByEmail)
 @index({ email: 1 })
@@ -45,6 +45,8 @@ export default class Candidate {
   @Field(() => String, { nullable: true })
   @prop()
   skillSet: string;
+
+  
 }
 
 export const CandidateModel = getModelForClass<typeof Candidate, QueryHelpers>(

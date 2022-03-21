@@ -1,10 +1,20 @@
 import { ApolloError } from "apollo-server-core";
 import Candidate, { CandidateModel } from "../graphql/schema/candidate.schema";
 import { CandidateInput } from "../graphql/types";
+import Context from "../graphql/types/context";
 
 export class CandidateService {
-  async createCandidate(input: CandidateInput): Promise<Candidate> {
-    return CandidateModel.create(input);
+  async createCandidate(
+    input: CandidateInput,
+    context: Context
+  ): Promise<Candidate> {
+    //verify if an attachment was uploaded
+    // save it in the right place and getback the url
+    // add the url in to the database and return the candidate
+    console.log("uploaded input", input);
+
+    return CandidateModel.findById("6234b5730f6a3ee28a717e2b").lean();
+    // return CandidateModel.create(input);
   }
 
   async findByEmail(email: string) {
@@ -52,11 +62,12 @@ export class CandidateService {
   }
 
   async findCandidates(input: CandidateInput | null): Promise<Candidate[]> {
-   
-    const document =  (input)? CandidateModel.find({ ...input }) : CandidateModel.find();
+    const document = input
+      ? CandidateModel.find({ ...input })
+      : CandidateModel.find();
     const result = await document.lean();
     console.log(result.length);
-    
+
     return result;
   }
 }

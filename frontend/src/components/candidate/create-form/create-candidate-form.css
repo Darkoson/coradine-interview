@@ -1,0 +1,8 @@
+.CreateCandidateForm {
+  width: 50%;
+  padding: 15px 10px;
+}
+.CreateCandidateForm form {
+  display: flex;
+  justify-content: space-between;
+}

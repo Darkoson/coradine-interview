@@ -1,4 +1,5 @@
 import { IsEmail, MaxLength, MinLength } from "class-validator";
+import { Stream } from "stream";
 import { Field, InputType } from "type-graphql";
 
 @InputType()
@@ -53,6 +54,20 @@ export class CandidateInput {
 
   @Field(() => String, { nullable: true })
   skillSet: string;
+
+  @Field(() => UploadFile, { nullable: true })
+  upload: any;
+}
+
+@InputType()
+export class UploadFile {
+  @Field(() => String, { nullable: true })
+  filename: string;
+  @Field(() => String, { nullable: true })
+  mimetype: string;
+  @Field(() => String, { nullable: true })
+  encoding: string;
+  createReadStream?: () => Stream;
 }
 
 // import { createUnionType } from "type-graphql";

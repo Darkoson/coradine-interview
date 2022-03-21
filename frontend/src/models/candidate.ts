@@ -16,4 +16,6 @@ export interface Candidate {
   status?: string;
 
   skillSet?: string;
+
+  upload?: any;
 }
