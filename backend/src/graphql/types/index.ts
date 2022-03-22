@@ -1,6 +1,10 @@
 import { IsEmail, MaxLength, MinLength } from "class-validator";
 import { ReadStream } from "fs";
-import { GraphQLUpload, Upload} from "graphql-upload";
+//import { GraphQLScalarType } from "graphql";
+import {
+  GraphQLUpload,
+  //Upload
+} from "graphql-upload";
 //import { Stream } from "stream";
 import { Field, InputType } from "type-graphql";
 
@@ -75,7 +79,7 @@ export class CandidateInput {
   resume: string;
 
   @Field(() => GraphQLUpload, { nullable: true })
-  upload: Upload;
+  upload: Promise<FileUpload>;
 }
 
 

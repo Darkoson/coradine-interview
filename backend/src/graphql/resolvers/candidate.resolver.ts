@@ -8,8 +8,12 @@ import FileService from "../../services/file.service";
 
 @Resolver()
 class CandidateResolver {
-  constructor(private candidateService: CandidateService) {
-    this.candidateService = new CandidateService();
+  constructor(
+    private candidateService: CandidateService,
+    private fileService: FileService
+  ) {
+    this.candidateService = CandidateService.$_getInstance();
+    this.fileService = FileService.$_getInstance();
   }
 
   @Mutation(() => Candidate)
@@ -17,19 +21,14 @@ class CandidateResolver {
     @Arg("input") input: CandidateInput,
     @Ctx() context: Context
   ) {
-    console.log("inside resolver uploadedFile =");
+    const uploadedFile = await input.upload;
 
-    if (input.upload) {
-      const uploadedFile = await input.upload.file;
-      const fileService = new FileService();
-      const resume = uploadedFile
-        ? await fileService.saveCandidateResume(uploadedFile)
-        : "";
-
+    if (uploadedFile) {
+      const resume = await this.fileService.saveCandidateResume(uploadedFile);
       input.resume = resume;
     }
 
-    console.log("input after saving file in resolver = ");
+    console.log("input after saving file in resolver = ", input);
 
     return this.candidateService.createCandidate(input);
   }

@@ -4,9 +4,17 @@ import { CandidateInput } from "../graphql/types";
 //import Context from "../graphql/types/context";
 
 export class CandidateService {
-  async createCandidate(
-    input: CandidateInput
-  ): Promise<Candidate> {
+  private static $_instance: CandidateService;
+
+  private constructor() {}
+
+  static $_getInstance(): CandidateService {
+    if (!this.$_instance) {
+      this.$_instance = new CandidateService();
+    }
+    return this.$_instance;
+  }
+  async createCandidate(input: CandidateInput): Promise<Candidate> {
     //verify if an attachment was uploaded
     // save it in the right place and getback the url
     // add the url in to the database and return the candidate

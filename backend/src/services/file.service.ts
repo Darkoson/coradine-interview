@@ -1,4 +1,4 @@
-import path from "path";
+import path, { resolve } from "path";
 import fs from "fs";
 
 import { FileUpload } from "../graphql/types";
@@ -9,13 +9,24 @@ const USER_PROFILE_FOLDER = "candidates/profile/";
 const CANDIDATE_RESUME_FOLDER = "candidates/resume/";
 const CANDIDATE_PROFILE_FOLDER = "candidates/profile/";
 
-enum FileType {
+export enum FileType {
   USER_PROFILE = 0,
   CANDIDATE_PROFILE = 1,
   CANDIDATE_RESUME = 2,
 }
 
 class FileService {
+  private static $_instance: FileService;
+
+  private constructor() {}
+
+  static $_getInstance(): FileService {
+    if (!this.$_instance) {
+      this.$_instance = new FileService();
+    }
+    return this.$_instance;
+  }
+
   async saveCandidateResume(uploadedFile: FileUpload): Promise<string> {
     console.log("inside file service uploaded =");
 
@@ -55,10 +66,16 @@ class FileService {
 
     const absolutePath = ABSOLUTE_PUBLIC_FOLDER + destinationFile;
     const stream = createReadStream();
-    await stream.pipe(fs.createWriteStream(absolutePath));
+
+    await stream
+      .pipe(fs.createWriteStream(absolutePath))
+      .on("finish", () => resolve("complete"))
+      .on("error", () => resolve("error"));
+
+    console.log("absolutePath", absolutePath);
 
     return destinationFile;
   }
 }
 
-export default  FileService;
+export default FileService;
