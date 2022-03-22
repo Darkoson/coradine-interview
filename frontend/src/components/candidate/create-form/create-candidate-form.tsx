@@ -1,19 +1,17 @@
 import { useForm } from "react-hook-form";
 import "./create-candidate-form.css";
-import { Candidate } from "../../../models/candidate";
-import { MutationCreateCandidate } from "../../../graphql/hooks/candidate-request";
+//import { Candidate } from "../../../models/candidate";
+import candidateService from "../../../services/candidate.service";
 
 const CreateCandidateForm = () => {
+  const { register, handleSubmit } = useForm();
 
-  const { register, handleSubmit } = useForm<Candidate>();
- 
+  const handleCreation = handleSubmit(async ({ email, uploads }) => {
+    const upload = uploads ? uploads[0] : null;
+    console.log("uploads", uploads);
 
-  const handleCreation = handleSubmit(({ email, resume }) => {
-    console.log(email, resume);
-
-    const result = MutationCreateCandidate({ email, resume });
-    console.log("result", result);
-    
+    const result = await candidateService.createCandidate({ email, upload });
+    console.log("result inform =", result);
   });
 
   return (
@@ -24,7 +22,7 @@ const CreateCandidateForm = () => {
           {...register("email", { required: true })}
           placeholder="candidate email"
         />
-        <input type="file" {...register("resume", { required: true })} />
+        <input type="file" {...register("uploads", { required: true })} />
         <button type="submit">Save </button>
       </form>
     </div>

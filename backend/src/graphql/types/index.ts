@@ -1,6 +1,22 @@
 import { IsEmail, MaxLength, MinLength } from "class-validator";
-import { Stream } from "stream";
+import { ReadStream } from "fs";
+import { GraphQLUpload, Upload} from "graphql-upload";
+//import { Stream } from "stream";
 import { Field, InputType } from "type-graphql";
+
+@InputType()
+export class FileUpload {
+  @Field(() => String, { nullable: true })
+  filename: string;
+
+  @Field(() => String, { nullable: true })
+  mimetype: string;
+
+  @Field(() => String, { nullable: true })
+  encoding: string;
+
+  createReadStream: () => ReadStream;
+}
 
 @InputType()
 export class SignupInput {
@@ -55,20 +71,14 @@ export class CandidateInput {
   @Field(() => String, { nullable: true })
   skillSet: string;
 
-  @Field(() => UploadFile, { nullable: true })
-  upload: any;
+  @Field(() => String, { nullable: true })
+  resume: string;
+
+  @Field(() => GraphQLUpload, { nullable: true })
+  upload: Upload;
 }
 
-@InputType()
-export class UploadFile {
-  @Field(() => String, { nullable: true })
-  filename: string;
-  @Field(() => String, { nullable: true })
-  mimetype: string;
-  @Field(() => String, { nullable: true })
-  encoding: string;
-  createReadStream?: () => Stream;
-}
+
 
 // import { createUnionType } from "type-graphql";
 

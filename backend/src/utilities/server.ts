@@ -9,22 +9,21 @@ import Context from "../graphql/types/context";
 import { verifyJwt } from "./jwt";
 import User from "../graphql/schema/user.schema";
 
-import express from "express"
-import cookieParser from "cookie-parser";
+import {
+  graphqlUploadExpress, // A Koa implementation is also exported.
+} from "graphql-upload";
+
+import express from "express";
 
 export async function getApolloServerStarted() {
   const schema = await buildSchema({
     resolvers,
   });
 
-    const app = express();
-    app.use(cookieParser());
-
   const apolloServer = new ApolloServer({
     schema,
     context: (ctx: Context) => {
       const context = ctx;
-
 
       if (ctx.req.cookies.accessToken) {
         const user = verifyJwt<User>(ctx.req.cookies.accessToken);
@@ -40,8 +39,10 @@ export async function getApolloServerStarted() {
   });
 
   await apolloServer.start();
-  apolloServer.applyMiddleware({ app });
 
+  const app = express();
+  app.use(graphqlUploadExpress());
+  app.use(express.static("public"));
 
   return { app, apolloServer };
 }

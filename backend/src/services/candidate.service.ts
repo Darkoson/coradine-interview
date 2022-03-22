@@ -1,20 +1,21 @@
 import { ApolloError } from "apollo-server-core";
 import Candidate, { CandidateModel } from "../graphql/schema/candidate.schema";
 import { CandidateInput } from "../graphql/types";
-import Context from "../graphql/types/context";
+//import Context from "../graphql/types/context";
 
 export class CandidateService {
   async createCandidate(
-    input: CandidateInput,
-    context: Context
+    input: CandidateInput
   ): Promise<Candidate> {
     //verify if an attachment was uploaded
     // save it in the right place and getback the url
     // add the url in to the database and return the candidate
-    console.log("uploaded input", input);
+    console.log("inside candidate service create input = ");
+
+    // const output = await CandidateModel.create(input);
 
     return CandidateModel.findById("6234b5730f6a3ee28a717e2b").lean();
-    // return CandidateModel.create(input);
+    //return output;
   }
 
   async findByEmail(email: string) {
